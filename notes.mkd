@@ -1,0 +1,29 @@
+# QueryString e Path Params
+
+## Path Param ### é o caminho apontado a uma url para que ela possa enviar as requisições ao servidor. Exemplo: 
+
+## www.exemplo.com.br/pagina/1000.
+### www.exemplo.com.br é o caminho geral do website.
+### /pagina/1000 é o caminho específico a ser acessado pelo servidor, na requisição feita.
+
+
+## Query String ### é a sintaxe que define filtros para o acesso dentro de um caminho com parâmetro. Exemplo: 
+
+## www.exemplo.com.br/pagina?type=algumtipo&caracteristica=alguma
+
+### ? é o que indica o início do query.
+### type e característica são parâmetros com tipos especificados (no exemplo, algumtipo e alguma) que o servidor deve retornar ao usuário. o & (e comercial) concatena múltiplos parâmetros.
+
+## Query ?offset=n&limit=n
+
+### Quando houver offset e limit no query, significa paginação dos itens a serem retornados pelo servidor. offset indica o bloco a ser mostrado, limit indica quantos itens devem ser mostrados. Exemplo:
+
+## ?offset=3&limit=4 significa que mostrará os 4 itens do bloco a partir do item 3+1.
+
+### Uma requisição é composta por: url, request method, request headers, request body.
+
+### uma resposta do servidor é composta por: status code, response headers, response body.
+
+### A arrow function '=>' diminui a verbosidade do código, substituindo a palavra function. quando declarada, se tiver apenas uma linha, pode ser escrita na forma abaixo:
+
+### function nomeFunction (param){oneLineFunctionBody} === () => oneLineFunctionBody;
