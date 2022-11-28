@@ -5,11 +5,33 @@ const limit = 10;
 
 const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
-fetch(url)
-/*A arrow function '=>' diminui a verbosidade do código, substituindo 
-a palavra function. quando declarada, se tiver apenas uma linha, pode ser 
-escrita na forma abaixo: */
-    .then((response) => response.json())
-    .then((jsonBody) => console.log(jsonBody))
-    .catch((error) => console.error(error))
-    
+
+function convertPokemonToLi(pokemon){
+    return `
+    <li class="pokemon">
+                <span class="number">#001</span>
+                <span class="name">${pokemon.name}</span>
+
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type">Grass</li>
+                        <li class="type">Poison</li>
+                    </ol>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" 
+                    alt="${pokemon.name}">
+                </div>
+            </li>
+            `
+}
+
+const pokemonOl = document.getElementById('pokemonList');
+
+
+pokeApi.getPokemon().then((pokemonList) => {
+        /*adiciona um ponto de debug mais facilmente percebido*/
+        //debugger
+        for (let i = 0; i < pokemonList.length; i++) {
+            const pokemon = pokemonList[i];
+            pokemonOl.innerHTML += convertPokemonToLi(pokemon)
+        }
+    })
