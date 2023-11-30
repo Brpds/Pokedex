@@ -3,6 +3,7 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const limit = 10;
 let offset = 0;
 const maxRecords = 151;
+let backToTopButton = document.getElementById('backToTop')
 
 //adiciona um ponto de debug mais facilmente percebido
 //debugger
@@ -62,3 +63,18 @@ loadMoreButton.addEventListener('click', () => {
     }
 
 })
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+}

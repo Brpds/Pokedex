@@ -79,6 +79,10 @@
     border-radius: 1rem;
 }
 
+.pokemon:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
 .pokemon .number {
     color:#000;
     opacity: .3;
@@ -97,6 +101,15 @@ ol.pokemons .detail img{
     max-width: 100%;
     height: 70px;
 }
+
+body, section{
+    background-image: url('../images/pokemon_pokeball-wallpaper-1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-size: cover;
+}
+
 
 .pokemon .detail{
     display: flex;
@@ -139,6 +152,21 @@ ol.pokemons .detail img{
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+#backToTop{
+    width: 3rem;
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(red 45%, black 50%, white 65%);
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1rem;
 }
 
 

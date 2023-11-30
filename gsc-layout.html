@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex | Gold Silver Crystal Style</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./assets/CSS/gscstylesheet.css">
+    <!--font press start 2p-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div>
+    <h1>Pokédex</h1>
+    <h4>Choose a Pokémon</h4>
+    <div class="container">
+        <div class="mainDisplay">
+            <div class="imgStats">
+                <div class="showImage" id="showImage">
+                </div>
+                <div class="showStats" id="showStats">
+                    <ul class="statsName" id="statsName">
+                        <li>HP</li>
+                        <li>Atk</li>
+                        <li>Def</li>
+                        <li>S.Atk</li>
+                        <li>S.Def</li>
+                        <li>Spd</li>
+                    </ul>
+                    <ul class="statList" id="statList">
+                    </ul>
+                </div>
+            </div>
+            <div class="pokemonList">
+                <ol id="pokemonListGSC">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div id="mainVersion">
+        <a href="index.html">Versão Atividade</a>
+    </div>
+</div>
+
+
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/poke-gsc.js"></script>
+</body>
+</html>

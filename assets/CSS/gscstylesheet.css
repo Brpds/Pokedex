@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P';
+    font-size: .9rem;
+}
+
+/*
+    colors:
+
+    #d64e34
+    #58ba01
+
+*/
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../images/pokemon_pokeball-wallpaper-1920x1080.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 480px;
+    height: 480px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainDisplay{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: space-around;
+    height: 480px;
+    width: 400px;
+    background: #d64e34;
+}
+
+.imgStats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 480px;
+}
+
+.showImage, .showStats{
+    display: flex;
+    width: 160px;
+    height: 160px;
+    margin-top: 1rem;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.showImage{
+    flex-direction: column;
+}
+
+
+.showStats{
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.pokemonList{
+    display: flex;
+    overflow: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: start;
+    width: 200px;
+    background: #000;
+    color: white;
+}
+
+
+.pokemonList ol{
+    list-style-type: none;
+}
+
+.pokeHover:hover{
+    border: 1px solid green;
+    width: 170px;
+}
+
+.statList, .statsName{
+    display: flex;
+    padding: .5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    color: white;
+}
+
+.statList{
+    text-align: end;
+}
+
+.statList ol {
+    list-style: none;
+}
+
+.displayImage{
+    display: block;
+    text-align: center;
+    align-content: center;
+    background-size: contain;
+    width: 50%;
+    margin:auto;
+}
+
+#mainVersion{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+#mainVersion a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#mainVersion a:visited{
+    color: black;
+}
+
+#pokemonName{
+    display: block;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+}

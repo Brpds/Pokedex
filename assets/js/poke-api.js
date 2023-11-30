@@ -13,6 +13,12 @@ function convertPokemonApiToModel(pokeDetail){
     pokemon.type = type;
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
+    const stats = pokeDetail.stats.map((statSlot) => statSlot.base_stat)
+    const [stat] = stats;
+
+    pokemon.stats = stats;
+    pokemon.stat = stat;
+
     return pokemon
 }
 
